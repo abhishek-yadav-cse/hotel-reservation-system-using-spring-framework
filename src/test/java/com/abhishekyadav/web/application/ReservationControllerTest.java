@@ -1,8 +1,6 @@
 package com.abhishekyadav.web.application;
 
 import com.abhishekyadav.business.domain.RoomReservation;
-import com.abhishekyadav.business.service.ReservationService;
-import com.abhishekyadav.webapplication.ReservationController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
