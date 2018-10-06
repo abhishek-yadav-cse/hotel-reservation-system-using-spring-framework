@@ -1,6 +1,7 @@
 package com.abhishekyadav.webapplication;
 
 import com.abhishekyadav.business.domain.RoomReservation;
+import com.abhishekyadav.business.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,7 +20,7 @@ public class ReservationController {
 
     @RequestMapping(method= RequestMethod.GET)
     public String getReservations(@RequestParam(value="date", required=false)String dateString, Model model){
-        List<RoomReservation> roomReservationList = this.reservationService.getRoomReservationForDate(dateString);
+        List<RoomReservation> roomReservationList = this.reservationService.getRoomReservationsForDate(dateString);
         model.addAttribute("roomReservations", roomReservationList);
         return "reservations";
     }
