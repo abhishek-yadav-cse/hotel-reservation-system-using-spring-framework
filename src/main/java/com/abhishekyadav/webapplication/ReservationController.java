@@ -23,5 +23,6 @@ public class ReservationController {
         List<RoomReservation> roomReservationList = this.reservationService.getRoomReservationsForDate(dateString);
         model.addAttribute("roomReservations", roomReservationList);
         return "reservations";
+        
     }
 }
